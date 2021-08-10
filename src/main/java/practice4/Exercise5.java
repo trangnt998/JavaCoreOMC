@@ -6,18 +6,24 @@ public class Exercise5 {
     //5. Nhập một số nguyên dương n. Xuất ra số ngược lại. Ví dụ: Nhập 1706  Xuất 6071.
 
     //tìm số đảo ngược
-    public static int reverseNum(int n) {
+    public static int[] reverseNum(int n) {
+        String str_n = String.valueOf(n);
+        int size = str_n.length();
+
         if (n > 0) {
-            int reNum = 0;
+            int[] reNum = new int[size];
+            int i = 0;
             while (n > 0) {
-                reNum = reNum * 10 + (n % 10);
+                reNum[i] = n % 10;
                 n /= 10;
+                i++;
             }
             return reNum;
         } else {
-            return -1; //trả về -1 nếu đầu vào sai
+            return new int[]{};
         }
     }
+
 
     public static void main(String[] args) {
         //Test
@@ -25,8 +31,10 @@ public class Exercise5 {
         System.out.print("Nhap n: ");
         int n = in.nextInt();
 
-        int reverse = reverseNum(n);
-        System.out.println(reverse);
+        int[] reverse = reverseNum(n);
+        for (int i : reverse) {
+            System.out.print(i);
+        }
     }
 
 }
