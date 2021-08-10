@@ -38,7 +38,6 @@ public class Exercise2 {
 
     }
 
-
     public static void main(String[] args) {
         //Test
         Scanner in = new Scanner(System.in);

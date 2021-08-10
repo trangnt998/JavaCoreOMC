@@ -21,7 +21,6 @@ public class Exercise1 {
         return n > 0 && n == n2; //trả về true nếu n==n2 và false nếu n != n2 với đk n nguyên dương
     }
 
-
     //b. Có phải là số chính phương? Ví dụ: 4, 9, 16, ...
     public static boolean isSquareNumber(int n) { //cách 1
         if (n > 0) {
