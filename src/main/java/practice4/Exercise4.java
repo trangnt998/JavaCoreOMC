@@ -45,6 +45,11 @@ public class Exercise4 {
         int n = in.nextInt();
 
         int sumPrim = sumPrime(n);
-        System.out.print("Tong cac so nguyen to nho hon " + n + " la " + sumPrim);
+        if (sumPrim == -1) {
+            System.out.println("Sai input!");
+        } else {
+            System.out.print("Tong cac so nguyen to nho hon " + n + " la " + sumPrim);
+        }
+
     }
 }

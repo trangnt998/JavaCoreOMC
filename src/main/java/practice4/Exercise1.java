@@ -21,13 +21,9 @@ public class Exercise1 {
         return n > 0 && n == n2; //trả về true nếu n==n2 và false nếu n != n2 với đk n nguyên dương
     }
 
-    /*//b. Có phải là số chính phương? Ví dụ: 4, 9, 16, ...
-    public static boolean isSquareNumber(int n) {
-        return n > 0 && Math.sqrt(n) % 1 == 0;
-    }*/
 
     //b. Có phải là số chính phương? Ví dụ: 4, 9, 16, ...
-    public static boolean isSquareNumber(int n) {
+    public static boolean isSquareNumber(int n) { //cách 1
         if (n > 0) {
             for (int i = 1; i <= Math.sqrt(n); i++) {
                 if (i * i == n) {
@@ -39,6 +35,20 @@ public class Exercise1 {
             return false;
         }
     }
+
+/*
+
+    //b. Có phải là số chính phương? Ví dụ: 4, 9, 16, ...
+    public static boolean isSquareNumber(int n) { //cách 2
+        if (n > 0) {
+            int sqrt_n = (int) Math.floor(Math.sqrt(n));
+            return sqrt_n * sqrt_n == n;
+        } else {
+            return false;
+        }
+    }
+
+*/
 
     public static void main(String[] args) {
         //Test

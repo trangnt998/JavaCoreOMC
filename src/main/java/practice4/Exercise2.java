@@ -48,9 +48,19 @@ public class Exercise2 {
         int fact = factorial(n);
         int sumFact = sumFactorial(n);
 
-        System.out.println(n + "! = " + fact);
-        System.out.println("1! + 2! + ... + " + n + "!= " + sumFact);
+        //d. S = 1*2*...*n = n!
+        if (fact == -1) {
+            System.out.println("Sai input!");
+        } else {
+            System.out.println(n + "! = " + fact);
+        }
 
+        //e. S = 1! + 2! + ... + n!
+        if (sumFact == -1) {
+            System.out.println("Sai input!");
+        } else {
+            System.out.println("1! + ... + " + n + "!= " + sumFact);
+        }
     }
 
 }

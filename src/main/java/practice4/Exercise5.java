@@ -32,9 +32,15 @@ public class Exercise5 {
         int n = in.nextInt();
 
         int[] reverse = reverseNum(n);
-        for (int i : reverse) {
-            System.out.print(i);
+
+        if (reverse.length == 0) {
+            System.out.println("Sai input!");
+        } else {
+            for (int i : reverse) {
+                System.out.print(i);
+            }
         }
+
     }
 
 }
