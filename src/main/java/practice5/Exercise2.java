@@ -64,7 +64,6 @@ public class Exercise2 {
         return true;
     }
 
-
     public static void main(String[] args) {
         //test
         //a. Mảng có phải là mảng toàn chẵn

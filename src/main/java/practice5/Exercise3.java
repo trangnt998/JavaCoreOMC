@@ -46,7 +46,7 @@ public class Exercise3 {
         if (n > 0) {
             int[] intArr = inputIntArray(n);
             int count = div4Not5(intArr);
-            System.out.println(" -> " +count + " số");
+            System.out.println(" -> " + count + " số");
         } else {
             System.out.println("Sai du lieu!");
         }
