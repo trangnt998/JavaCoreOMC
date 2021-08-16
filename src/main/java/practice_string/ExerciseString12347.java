@@ -36,7 +36,6 @@ public class ExerciseString12347 {
         return result;
     }
 
-
     public static int occurChar(String s, char c) { //dem so lan xuat hien cua c trong s
         int count = 0;
         char c1;
@@ -85,7 +84,7 @@ public class ExerciseString12347 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap chuoi:");
+        System.out.print("Nhap chuoi: ");
         String s = sc.nextLine();
 
         System.out.println("Uppercase: " + printUppercase(s));
