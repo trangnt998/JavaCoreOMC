@@ -20,7 +20,7 @@ public class ExerciseString12347 {
                 result += c;
             }
         }
-        return result.toString();
+        return result;
     }
 
     public static String printNonNumeric(String s) {  //in ra ki tu khong phai la so
