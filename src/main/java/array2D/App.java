@@ -115,6 +115,19 @@ public class App {
         return sumCol;
     }
 
+    public static int sumRowAndCol(int[][] a, int r, int c) {//tính tổng các phần tử của hàng r và cột c
+        int sum = 0;
+        if (r > a.length && c > a[0].length) {
+            System.out.println("Chi so nhap vao vuot qua kich thuoc ma tran!");
+            return sum;
+        }
+        sum += sumElementsRow(a, r);
+        sum += sumElementsColumn(a, c);
+        sum -= a[r][c];
+
+        return sum;
+    }
+
     public static int sumMainDiagonal(int[][] a) { //tính tổng đường chéo chính của ma trận
         int sum = 0;
         int r = a.length, c = a[0].length;
@@ -232,7 +245,12 @@ public class App {
 
         System.out.print("Nhap cot can tinh tong: ");
         int c = sc.nextInt();
-        System.out.println("Tong hang " + c + " la: " + sumElementsColumn(a, c));
+        System.out.println("Tong cot " + c + " la: " + sumElementsColumn(a, c));
+
+        System.out.print("Nhap hang va cot can tinh tong: ");
+        r = sc.nextInt();
+        c = sc.nextInt();
+        System.out.println("Tong hang " + r + " va cot " + c + " la: " + sumRowAndCol(a, r, c));
 
         System.out.println("============Ma tran vuong=============");
         int[][] b = generateMatrix(4, 4, 0, 10);
