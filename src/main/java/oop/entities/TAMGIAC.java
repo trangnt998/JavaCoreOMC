@@ -20,15 +20,15 @@ public class TAMGIAC {
     public TAMGIAC() {
     }
 
-    public static boolean isTriangle(int a, int b, int c) { //check xem 3 cạnh có tạo thành 1 tam giác không
-        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+    public boolean isTriangle() { //check xem 3 cạnh có tạo thành 1 tam giác không
+        if ((this.a + this.b > this.c) && (this.a + this.c > this.b) && (this.b + this.c > this.a)) {
             return true;
         }
         return false;
     }
 
     public void printTamGiac() {
-        if (isTriangle(this.a, this.b, this.c)) {
+        if (isTriangle()) {
             System.out.format("(a,b,c) = (%d,%d,%d)\n", this.a, this.b, this.c);
         } else {
             System.out.println("Khong phai tam giac!");
@@ -36,14 +36,14 @@ public class TAMGIAC {
     }
 
     public int getPerimeterTriangle() {//chu vi tam giac
-        if (isTriangle(this.a, this.b, this.c)) {
+        if (isTriangle()) {
             return this.a + this.b + this.c;
         }
         return 0;
     }
 
     public float getAreaTriangle() {//dien tich tam giac
-        if (isTriangle(this.a, this.b, this.c)) {
+        if (isTriangle()) {
             float p = (float) (0.5 * getPerimeterTriangle());
             return (float) Math.sqrt(p * (p - a) * (p - b) * (p - c));
         }

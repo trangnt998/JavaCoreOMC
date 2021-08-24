@@ -1,6 +1,6 @@
 package oop.entities;
 
-import static oop.entities.Utils.gCD;
+import static oop.entities.Utils.GCD;
 
 public class PHANSO {
     /*
@@ -47,12 +47,13 @@ public class PHANSO {
         }
     }
 
+
     public PHANSO reducePhanSo() { //rút gọn phân số
         PHANSO phanso = new PHANSO();
         if (isPhanSo()) {
-            int gCD = gCD(this.tuSo, this.mauSo);
-            phanso.tuSo = this.tuSo / gCD;
-            phanso.mauSo = this.mauSo / gCD;
+            int GCD = GCD(this.tuSo, this.mauSo);
+            phanso.tuSo = this.tuSo / GCD;
+            phanso.mauSo = this.mauSo / GCD;
         }
         return phanso;
     }
@@ -95,7 +96,7 @@ public class PHANSO {
 
     public boolean isReducePhanSo() { //kiểm tra xem có phải phân số tối giản không
         if (isPhanSo()) {
-            if (Math.abs(gCD(this.tuSo, this.mauSo)) == 1) {
+            if (Math.abs(GCD(this.tuSo, this.mauSo)) == 1) {
                 return true;
             }
         }
@@ -106,13 +107,17 @@ public class PHANSO {
     public PHANSO[] isomerizatePhanSo(PHANSO ps) {//quy đồng 2 phân số
         PHANSO phanso1 = new PHANSO();
         PHANSO phanso2 = new PHANSO();
-        reducePhanSo();
-        ps.reducePhanSo();
+        phanso1.tuSo = this.tuSo;
+        phanso1.mauSo = this.mauSo;
+        phanso1 = phanso1.reducePhanSo();
+        phanso2 = ps.reducePhanSo();
 
-        phanso1.mauSo = phanso2.mauSo = this.mauSo * ps.mauSo;
-        phanso1.tuSo = this.tuSo * ps.mauSo;
-        phanso2.tuSo = ps.tuSo * this.mauSo;
-
+        int GCDms = GCD(phanso1.mauSo, phanso2.mauSo);
+        int ms = phanso1.mauSo * phanso2.mauSo / GCDms;
+        phanso1.tuSo = phanso1.tuSo * phanso2.mauSo/GCDms;
+        phanso2.tuSo = phanso2.tuSo * phanso1.mauSo/GCDms;
+        phanso1.mauSo = phanso2.mauSo = ms;
+        System.out.println("tu so 1 " + phanso1.tuSo);
         return new PHANSO[]{phanso1, phanso2};
     }
 
@@ -130,9 +135,9 @@ public class PHANSO {
             PHANSO PS = new PHANSO(this.tuSo, this.mauSo);
             int ts = this.tuSo;
             int ms = this.mauSo;
-            PS.subPhanSo(ps);
+            PS = PS.subPhanSo(ps);
 
-            if (PS.tuSo * PS.mauSo > 0) {
+            if (PS.isPossitivePhanSo()) {
                 System.out.format("%d/%d > %d/%d\n", ts, ms, ps.tuSo, ps.mauSo);
             } else if (PS.tuSo == 0) {
                 System.out.format("%d/%d = %d/%d\n", ts, ms, ps.tuSo, ps.mauSo);

@@ -29,7 +29,7 @@ public class DONTHUC {
         } else if (this.exp == 1) {
             System.out.format("%dx\n", this.coef);
         } else if (this.coef == 0) {
-            System.out.format("0\n", this.coef);
+            System.out.format("0\n");
         } else {
             System.out.format("%dx^%d\n", this.coef, this.exp);
         }
@@ -59,13 +59,18 @@ public class DONTHUC {
 
     public DONTHUC k_DerivativeDonThuc(int k) { //đạo hàm cấp k của đơn thức
         DONTHUC donthuc = new DONTHUC();
-        while (k > 0) {
-            this.coef *= this.exp;
-            this.exp -= 1;
-            k--;
-        }
         donthuc.coef = this.coef;
         donthuc.exp = this.exp;
+        if (k > this.exp){
+            donthuc.coef = donthuc.exp = 0;
+        }
+        else {
+            while (k > 0) {
+                donthuc.coef *= donthuc.exp;
+                donthuc.exp -= 1;
+                k--;
+            }
+        }
         return donthuc;
     }
 

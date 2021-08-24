@@ -60,11 +60,14 @@ public class App {
         donthuc = donthuc1.derivativeDonThuc();
         donthuc.printDonThuc();
 
-        System.out.print("Dao ham cap k: ");
-        donthuc = donthuc1.k_DerivativeDonThuc(2);
+
+        int k = 3;
+        System.out.format("Dao ham cap %d: ", k);
+        donthuc = donthuc1.k_DerivativeDonThuc(k);
         donthuc.printDonThuc();
 
-        System.out.println("Gia tri don thuc tai x = x0 la: " + donthuc1.getValueDonThuc(-1));
+        int x0 = -1;
+        System.out.println("Gia tri don thuc tai x = " + x0 + " la: " + donthuc1.getValueDonThuc(x0));
 
 
         //test DIEM
@@ -79,7 +82,7 @@ public class App {
         diem2.printDiem();
         diem3.printDiem();
 
-        System.out.println(diem.quadrant());
+        System.out.println("Goc phan tu thu " + diem.quadrant());
 
 
         //test TAMGIAC
