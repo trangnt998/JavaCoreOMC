@@ -130,7 +130,7 @@ public class PHANSO {
         return false;
     }
 
-    public void comparePhanSo(PHANSO ps) { //so sánh 2 phân số
+    public int comparePhanSo(PHANSO ps) { //so sánh 2 phân số, trả ra 1 nếu ps1 > ps2, 0 nếu ps1=ps2, -1 nếu ngược lại
         if (isPhanSo()) {
             PHANSO PS = new PHANSO(this.tuSo, this.mauSo);
             int ts = this.tuSo;
@@ -138,13 +138,14 @@ public class PHANSO {
             PS = PS.subPhanSo(ps);
 
             if (PS.isPossitivePhanSo()) {
-                System.out.format("%d/%d > %d/%d\n", ts, ms, ps.tuSo, ps.mauSo);
+                return 1;
             } else if (PS.tuSo == 0) {
-                System.out.format("%d/%d = %d/%d\n", ts, ms, ps.tuSo, ps.mauSo);
+                return 0;
             } else {
-                System.out.format("%d/%d < %d/%d\n", ts, ms, ps.tuSo, ps.mauSo);
+                return -1;
             }
         }
+        return -2; //neu khong phai phan so
     }
 
 }

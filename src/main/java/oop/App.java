@@ -38,7 +38,7 @@ public class App {
         listPs[1].printPhanSo();
 
         System.out.println("Phan so ps1 duong -> " + ps1.isPossitivePhanSo());
-        ps1.comparePhanSo(ps2);
+        System.out.println(ps1.comparePhanSo(ps2));
 
 
         //test DONTHUC
