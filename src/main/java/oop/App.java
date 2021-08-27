@@ -60,7 +60,6 @@ public class App {
         monomial = monomial1.derivativeMonomial();
         monomial.printMonomial();
 
-
         int k = 3;
         System.out.format("Dao ham cap %d: ", k);
         monomial = monomial1.k_DerivativeMonomial(k);

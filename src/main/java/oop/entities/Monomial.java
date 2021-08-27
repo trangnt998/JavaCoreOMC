@@ -22,7 +22,6 @@ public class Monomial {
         this.exp = exp;
     }
 
-
     public void printMonomial() {
         if (coef % 1 == 0) {
             if (this.exp == 0) {

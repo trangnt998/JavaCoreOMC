@@ -43,7 +43,6 @@ public class Point {
         return point;
     }
 
-
     public Point symmetryOy() {//điểm đối xứng qua truc Oy
         Point point = new Point();
         point.x = -this.x;

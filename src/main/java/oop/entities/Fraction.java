@@ -23,7 +23,6 @@ public class Fraction {
     }
 
     public Fraction() {
-
     }
 
     public boolean isFraction() { //kiểm tra phân số có tồn tại không (mẫu khác 0)
