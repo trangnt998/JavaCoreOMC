@@ -1,96 +1,96 @@
 package oop;
 
-import oop.entities.DIEM;
-import oop.entities.DONTHUC;
-import oop.entities.PHANSO;
-import oop.entities.TAMGIAC;
+import oop.entities.Point;
+import oop.entities.Monomial;
+import oop.entities.Fraction;
+import oop.entities.Triangle;
 
 public class App {
     public static void main(String[] args) {
         //test PHANSO
         System.out.println("===============TEST PHAN SO:=================");
-        PHANSO ps1 = new PHANSO(2, 4);
-        PHANSO ps2 = new PHANSO(-1, 3);
+        Fraction ps1 = new Fraction(2, 4);
+        Fraction ps2 = new Fraction(-1, 3);
 
-        ps1.printPhanSo();
-        ps2.printPhanSo();
+        ps1.printFraction();
+        ps2.printFraction();
 
-        System.out.println("Phan so 1 toi gian -> " + ps1.isReducePhanSo());
-        System.out.println("Phan so 2 toi gian -> " + ps2.isReducePhanSo());
+        System.out.println("Phan so 1 toi gian -> " + ps1.isReduceFraction());
+        System.out.println("Phan so 2 toi gian -> " + ps2.isReduceFraction());
 
-        PHANSO ps3 = ps1.reducePhanSo();
-        PHANSO ps4 = ps2.reducePhanSo();
-        ps3.printPhanSo();
-        ps4.printPhanSo();
+        Fraction ps3 = ps1.reduceFraction();
+        Fraction ps4 = ps2.reduceFraction();
+        ps3.printFraction();
+        ps4.printFraction();
 
         System.out.print("Tong: ");
-        ps1.addPhanSo(ps2).printPhanSo();
+        ps1.addFraction(ps2).printFraction();
         System.out.print("Hieu: ");
-        ps1.subPhanSo(ps2).printPhanSo();
+        ps1.subFraction(ps2).printFraction();
         System.out.print("Tich: ");
-        ps1.mulPhanSo(ps2).printPhanSo();
+        ps1.mulFraction(ps2).printFraction();
         System.out.print("Thuong: ");
-        ps1.divPhanSo(ps2).printPhanSo();
+        ps1.divFraction(ps2).printFraction();
 
         System.out.println("Quy dong: ");
-        PHANSO[] listPs = ps1.isomerizatePhanSo(ps2);
-        listPs[0].printPhanSo();
-        listPs[1].printPhanSo();
+        Fraction[] listPs = ps1.isomerizateFraction(ps2);
+        listPs[0].printFraction();
+        listPs[1].printFraction();
 
-        System.out.println("Phan so ps1 duong -> " + ps1.isPossitivePhanSo());
-        System.out.println(ps1.comparePhanSo(ps2));
+        System.out.println("Phan so ps1 duong -> " + ps1.isPossitiveFraction());
+        System.out.println(ps1.compareFraction(ps2));
 
 
         //test DONTHUC
         System.out.println("===============TEST DONTHUC:=================");
-        DONTHUC donthuc1 = new DONTHUC(2, 2);
-        DONTHUC donthuc2 = new DONTHUC(1, 2);
-        donthuc1.printDonThuc();
-        donthuc2.printDonThuc();
+        Monomial monomial1 = new Monomial(2, 2);
+        Monomial monomial2 = new Monomial(3, 5);
+        monomial1.printMonomial();
+        monomial2.printMonomial();
 
-        DONTHUC donthuc = donthuc1.mulDonThuc(donthuc2);
+        Monomial monomial = monomial1.mulMonomial(monomial2);
         System.out.print("Tich 2 don thuc: ");
-        donthuc.printDonThuc();
+        monomial.printMonomial();
 
-        donthuc = donthuc1.divDonThuc(donthuc2);
+        monomial = monomial1.divMonomial(monomial2);
         System.out.print("Thuong 2 don thuc: ");
-        donthuc.printDonThuc();
+        monomial.printMonomial();
 
         System.out.print("Dao ham cap 1: ");
-        donthuc = donthuc1.derivativeDonThuc();
-        donthuc.printDonThuc();
+        monomial = monomial1.derivativeMonomial();
+        monomial.printMonomial();
 
 
         int k = 3;
         System.out.format("Dao ham cap %d: ", k);
-        donthuc = donthuc1.k_DerivativeDonThuc(k);
-        donthuc.printDonThuc();
+        monomial = monomial1.k_DerivativeMonomial(k);
+        monomial.printMonomial();
 
         int x0 = -1;
-        System.out.println("Gia tri don thuc tai x = " + x0 + " la: " + donthuc1.getValueDonThuc(x0));
+        System.out.println("Gia tri don thuc tai x = " + x0 + " la: " + monomial1.getValueMonomial(x0));
 
 
         //test DIEM
         System.out.println("===============TEST DIEM:=================");
-        DIEM diem = new DIEM(1, 2);
-        diem.printDiem();
+        Point point = new Point(1, 2);
+        point.printPoint();
 
-        DIEM diem1 = diem.symmetryDiemO();
-        DIEM diem2 = diem.symmetryOx();
-        DIEM diem3 = diem.symmetryOy();
-        diem1.printDiem();
-        diem2.printDiem();
-        diem3.printDiem();
+        Point point1 = point.symmetryPointO();
+        Point point2 = point.symmetryOx();
+        Point point3 = point.symmetryOy();
+        point1.printPoint();
+        point2.printPoint();
+        point3.printPoint();
 
-        System.out.println("Goc phan tu thu " + diem.quadrant());
+        System.out.println("Goc phan tu thu " + point.quadrant());
 
 
         //test TAMGIAC
         System.out.println("===============TEST TAMGIAC:=================");
-        TAMGIAC tamgiac = new TAMGIAC(3, 4, 5);
-        tamgiac.printTamGiac();
+        Triangle triangle = new Triangle(3, 4, 5);
+        triangle.printTamGiac();
 
-        System.out.println(tamgiac.getPerimeterTriangle());
-        System.out.println(tamgiac.getAreaTriangle());
+        System.out.println(triangle.getPerimeterTriangle());
+        System.out.println(triangle.getAreaTriangle());
     }
 }

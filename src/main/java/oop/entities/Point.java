@@ -1,6 +1,6 @@
 package oop.entities;
 
-public class DIEM {
+public class Point {
     /*
     Điểm trong mặt phẳng Oxy
         § Khai báo kiểu dữ liệu điểm (DIEM)
@@ -13,42 +13,42 @@ public class DIEM {
     private int x;
     private int y;
 
-    public DIEM(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public DIEM() {
+    public Point() {
     }
 
-    public void printDiem() {
+    public void printPoint() {
         System.out.format("(x,y) = (%d,%d)\n", this.x, this.y);
     }
 
-    public double distance(DIEM d) { //tính khoảng cách 2 điểm
-        return Math.sqrt((this.x - d.x) * (this.x - d.x) + (this.y - d.y) * (this.y - d.y));
+    public double distance(Point p) { //tính khoảng cách 2 điểm
+        return Math.sqrt((this.x - p.x) * (this.x - p.x) + (this.y - p.y) * (this.y - p.y));
     }
 
-    public DIEM symmetryDiemO() {//điểm đối xứng qua gốc tọa độ O
-        DIEM diem = new DIEM();
-        diem.x = -this.x;
-        diem.y = -this.y;
-        return diem;
+    public Point symmetryPointO() {//điểm đối xứng qua gốc tọa độ O
+        Point point = new Point();
+        point.x = -this.x;
+        point.y = -this.y;
+        return point;
     }
 
-    public DIEM symmetryOx() {//điểm đối xứng qua truc Ox
-        DIEM diem = new DIEM();
-        diem.x = this.x;
-        diem.y = -this.y;
-        return diem;
+    public Point symmetryOx() {//điểm đối xứng qua truc Ox
+        Point point = new Point();
+        point.x = this.x;
+        point.y = -this.y;
+        return point;
     }
 
 
-    public DIEM symmetryOy() {//điểm đối xứng qua truc Oy
-        DIEM diem = new DIEM();
-        diem.x = -this.x;
-        diem.y = this.y;
-        return diem;
+    public Point symmetryOy() {//điểm đối xứng qua truc Oy
+        Point point = new Point();
+        point.x = -this.x;
+        point.y = this.y;
+        return point;
     }
 
     public int quadrant() {// đưa ra góc phần tư của điểm, nếu điểm thuộc trục thì trả về 0

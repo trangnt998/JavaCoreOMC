@@ -1,6 +1,6 @@
 package oop.entities;
 
-public class TAMGIAC {
+public class Triangle {
     /*
     Tam giác
     § Khai báo kiểu dữ lịêu tam giác (TAMGIAC)
@@ -11,13 +11,10 @@ public class TAMGIAC {
     private int b;
     private int c;
 
-    public TAMGIAC(int a, int b, int c) {
+    public Triangle(int a, int b, int c) {
         this.a = a;
         this.b = b;
         this.c = c;
-    }
-
-    public TAMGIAC() {
     }
 
     public boolean isTriangle() { //check xem 3 cạnh có tạo thành 1 tam giác không
