@@ -21,6 +21,22 @@ public class Point {
     public Point() {
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public static Point genaratePoint() {
+        int max = 20;
+        int min = -20;
+        int x = (int) Math.floor(Math.random() * (max - min) + min);
+        int y = (int) Math.floor(Math.random() * (max - min) + min);
+        return new Point(x, y);
+    }
+
     public void printPoint() {
         System.out.format("(x,y) = (%d,%d)\n", this.x, this.y);
     }

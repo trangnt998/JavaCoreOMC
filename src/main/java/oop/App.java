@@ -1,9 +1,6 @@
 package oop;
 
-import oop.entities.Point;
-import oop.entities.Monomial;
-import oop.entities.Fraction;
-import oop.entities.Triangle;
+import oop.entities.*;
 
 public class App {
     public static void main(String[] args) {
@@ -71,25 +68,28 @@ public class App {
 
         //test DIEM
         System.out.println("===============TEST DIEM:=================");
-        Point point = new Point(1, 2);
+        Point point = Point.genaratePoint();
         point.printPoint();
 
-        Point point1 = point.symmetryPointO();
-        Point point2 = point.symmetryOx();
-        Point point3 = point.symmetryOy();
-        point1.printPoint();
-        point2.printPoint();
-        point3.printPoint();
+        System.out.print("Điểm đối xứng qua trục tọa độ O: ");
+        point.symmetryPointO().printPoint();
+
+        System.out.print("Điểm đối xứng qua trục Ox: ");
+        point.symmetryOx().printPoint();
+
+        System.out.print("Điểm đối xứng qua trục Oy: ");
+        point.symmetryOy().printPoint();
 
         System.out.println("Goc phan tu thu " + point.quadrant());
 
 
         //test TAMGIAC
         System.out.println("===============TEST TAMGIAC:=================");
-        Triangle triangle = new Triangle(3, 4, 5);
+        Triangle triangle = new Triangle();
         triangle.printTamGiac();
 
-        System.out.println(triangle.getPerimeterTriangle());
-        System.out.println(triangle.getAreaTriangle());
+        System.out.println("Chu vi tam giac: " + triangle.getPerimeterTriangle());
+        System.out.println("Diện tích tam giac: " + triangle.getAreaTriangle());
+
     }
 }
