@@ -34,7 +34,7 @@ public class Main {
             }
 
             if (action == 6) {
-                System.out.println(function.getAmmountOfRectangularPlot());
+                System.out.println(function.getAmmountOfAllPlot());
             }
 
             System.out.println("Tiếp tục: Y/N?");
