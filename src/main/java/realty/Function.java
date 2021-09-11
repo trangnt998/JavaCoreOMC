@@ -74,7 +74,7 @@ public class Function {
         return ammount;
     }
 
-    public double getAmmountOfCirclePlot() {//(6) Tính tổng số tiền sở hữu đất hình vuong
+    public double getAmmountOfCirclePlot() {//(6) Tính tổng số tiền sở hữu đất hình tron
         double ammount = 0;
         for (int i = 0; i < this.cirlePlots.size(); i++) {
             ammount += this.cirlePlots.get(i).getAmmount();
@@ -82,5 +82,18 @@ public class Function {
         return ammount;
     }
 
+    public double getAmmountOfAllPlot() {//(6) Tính tổng số tiền sở hữu đất
+        double ammountTotal = 0;
+        for (int i = 0; i < this.rectangularPlots.size(); i++) {
+            ammountTotal += this.rectangularPlots.get(i).getAmmount();
+        }
+        for (int i = 0; i < this.squarePlots.size(); i++) {
+            ammountTotal += this.squarePlots.get(i).getAmmount();
+        }
+        for (int i = 0; i < this.cirlePlots.size(); i++) {
+            ammountTotal += this.cirlePlots.get(i).getAmmount();
+        }
+        return ammountTotal;
+    }
 
 }
