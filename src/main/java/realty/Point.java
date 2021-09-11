@@ -4,10 +4,10 @@ public class Point {
     private int x;
     private int y;
 
-    public Point(){
+    public Point() {
     }
 
-    public Point(int x, int y){
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -20,7 +20,7 @@ public class Point {
         return this.y;
     }
 
-    public String toString(){ //Hiển thị tọa độ điểm
+    public String toString() { //Hiển thị tọa độ điểm
         return "(x,y) = (" + this.x + "," + this.y + ")";
     }
 }

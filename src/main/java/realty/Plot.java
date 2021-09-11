@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class Plot {
     private double pricePerUnit;
 
-    public Plot(){}
+    public Plot() {
+    }
 
-    public Plot(double pricePerUnit){
+    public Plot(double pricePerUnit) {
         this.pricePerUnit = pricePerUnit;
     }
 
@@ -19,7 +20,7 @@ public class Plot {
         this.pricePerUnit = sc.nextDouble();
     }
 
-    private List<Rectangle> rectangles= new ArrayList<>();
+    private List<Rectangle> rectangles = new ArrayList<>();
     private List<Square> squares = new ArrayList<>();
     private List<Circle> circles = new ArrayList<>();
     private List<Triangle> triangles = new ArrayList<>();

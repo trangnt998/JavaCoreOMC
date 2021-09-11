@@ -1,7 +1,5 @@
 package realty;
 
-import java.util.Scanner;
-
 public class Shape {
 
     public void input(){ //Nhập thông tin

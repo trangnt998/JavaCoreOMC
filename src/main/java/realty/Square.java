@@ -1,8 +1,5 @@
 package realty;
 
-import realty.Point;
-import realty.Shape;
-
 import java.util.Scanner;
 
 public class Square extends Shape {

@@ -7,16 +7,16 @@ public class Rectangle extends Shape {
     private int width;
     private int height;
 
-    public Rectangle(){
+    public Rectangle() {
     }
 
-    public Rectangle(Point topLeft, int width, int height){
+    public Rectangle(Point topLeft, int width, int height) {
         this.topLeft = topLeft;
         this.width = width;
         this.height = height;
     }
 
-    public void input(){ //nhập thông tin
+    public void input() { //nhập thông tin
         super.input();
         System.out.println("Hình chữ nhật.");
         Scanner sc = new Scanner(System.in);
@@ -34,7 +34,7 @@ public class Rectangle extends Shape {
         this.width = sc.nextInt();
     }
 
-    public String toString(){ //xuất thông tin
+    public String toString() { //xuất thông tin
         return super.toString() +
                 "Hình chữ nhật: " +
                 "\nĐiểm trái trên: " + this.topLeft.toString() +
@@ -42,7 +42,7 @@ public class Rectangle extends Shape {
                 "\nChiều rộng: " + this.width;
     }
 
-    public double calculateArea(){ //tính diện tích
+    public double calculateArea() { //tính diện tích
         return this.height * this.width;
     }
 }

@@ -6,15 +6,15 @@ public class Circle extends Shape {
     private Point centerPoint;
     private int radius;
 
-    public Circle(){
+    public Circle() {
     }
 
-    public Circle(Point centerPoint, int radius){
+    public Circle(Point centerPoint, int radius) {
         this.centerPoint = centerPoint;
         this.radius = radius;
     }
 
-    public void input(){ //nhập thông tin
+    public void input() { //nhập thông tin
         super.input();
         System.out.println("Hình tròn.");
         Scanner sc = new Scanner(System.in);
@@ -30,14 +30,14 @@ public class Circle extends Shape {
         this.radius = sc.nextInt();
     }
 
-    public String toString(){ //xuất thông tin
+    public String toString() { //xuất thông tin
         return super.toString() +
                 "Hình tròn: " +
                 "\nTọa độ tâm: " + this.centerPoint.toString() +
                 "\nBánh kính: " + this.radius;
     }
 
-    public double calculateArea(){ //tính diện tích
+    public double calculateArea() { //tính diện tích
         return Math.PI * this.radius * this.radius;
     }
 }

@@ -14,6 +14,7 @@ public class App {
                 "\n(6) Tính số tiền." +
                 "\n====================================================");
 
+
         System.out.println("Thực hiện chương trình: nhấn Y. \nThoát chương trình: nhấn N.");
         Scanner sc = new Scanner(System.in);
         String confirmation = sc.nextLine();
