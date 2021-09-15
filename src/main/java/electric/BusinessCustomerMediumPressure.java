@@ -1,32 +1,32 @@
 package electric;
 
-public class BusinessCustomerMediumPressure extends Customer {
-    private double idleElectricNumber; //số điện dùng trong giờ thấp điểm
-    private double nomalElectricNumber; //số điện dùng trong giờ trung điểm
-    private double rushElectricNumber; //số điện dùng trong giờ cao điểm
-
+public class BusinessCustomerMediumPressure extends BusinessCustomer {
     public BusinessCustomerMediumPressure() {
     }
 
-    public BusinessCustomerMediumPressure(String ID, String name, String phone, int customerType,
+    public BusinessCustomerMediumPressure(String ID, String name, String phone, double customerType,
                                           double electricNumberPrevPeriod, double electricNumberThisPeriod,
                                           double idleElectricNumber, double nomalElectricNumber, double rushElectricNumber) {
-        super(ID, name, phone, customerType, electricNumberPrevPeriod, electricNumberThisPeriod);
-        this.idleElectricNumber = idleElectricNumber;
-        this.nomalElectricNumber = nomalElectricNumber;
-        this.rushElectricNumber = rushElectricNumber;
+        super(ID, name, phone, customerType, electricNumberPrevPeriod, electricNumberThisPeriod,
+                idleElectricNumber, nomalElectricNumber, rushElectricNumber);
     }
+
+    public String toString() { //xuất thông tin khách hàng
+        return super.toString() +
+                "\nLoại khách hàng: Khách hàng mua điện kinh doanh trung áp.";
+    }
+
 
     public double calElectricBill() {//tính số tiền điện phải trả
         double ammount = 0;
         double electricNumber = calElectricNumber();
 
         double[] typeElectricNumber = new double[3];
-        typeElectricNumber[0] = idleElectricNumber;
-        typeElectricNumber[1] = nomalElectricNumber;
-        typeElectricNumber[2] = rushElectricNumber;
+        typeElectricNumber[0] = getIdleElectricNumber();
+        typeElectricNumber[1] = getNomalElectricNumber();
+        typeElectricNumber[2] = getRushElectricNumber();
 
-        if (electricNumber == (this.idleElectricNumber + this.nomalElectricNumber + this.rushElectricNumber)) { //nếu tổng số điện = số điện thành phần
+        if (electricNumber == (getIdleElectricNumber() + getNomalElectricNumber() + getRushElectricNumber())) { //nếu tổng số điện = số điện thành phần
             for (int i = 0; i < LevelOfElectric.BusinessLevelOfMedium.values().length; i++) {
                 typeElectricNumber[i] =
                         ammount += typeElectricNumber[i] * LevelOfElectric.BusinessLevelOfMedium.values()[i].getPrice();
