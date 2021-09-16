@@ -1,7 +1,7 @@
 package electric;
 
 //Khách mua điện sinh hoạt giá lẻ
-public class RetailCustomer extends Customer {
+public class RetailCustomer extends PersonalCustomer {
     public RetailCustomer() {
     }
 

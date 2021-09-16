@@ -1,8 +1,6 @@
 package electric;
 
-import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class App {
     /*
@@ -50,21 +48,21 @@ public class App {
                 System.out.println("=========================================");
             } else if (c % 5 == 2) {
                 BusinessCustomerHighPressure businessCustomerHighPressure = new BusinessCustomerHighPressure(customer[c][0], customer[c][1], customer[c][2],
-                        electricCustomer[c][0], electricCustomer[c][1], electricCustomer[c][2],
+                        electricCustomer[c][0],
                         electricBusiness[c][0], electricBusiness[c][1], electricBusiness[c][2]);
                 System.out.println(businessCustomerHighPressure.toString());
                 System.out.println("Số tiền phải trả là: " + businessCustomerHighPressure.calElectricBill() + " VNĐ");
                 System.out.println("=========================================");
             } else if (c % 5 == 3) {
                 BusinessCustomerMediumPressure businessCustomerMediumPressure = new BusinessCustomerMediumPressure(customer[c][0], customer[c][1], customer[c][2],
-                        electricCustomer[c][0], electricCustomer[c][1], electricCustomer[c][2],
+                        electricCustomer[c][0],
                         electricBusiness[c][0], electricBusiness[c][1], electricBusiness[c][2]);
                 System.out.println(businessCustomerMediumPressure.toString());
                 System.out.println("Số tiền phải trả là: " + businessCustomerMediumPressure.calElectricBill() + " VNĐ");
                 System.out.println("=========================================");
             } else {
                 BusinessCustomerLowPressure businessCustomerLowPressure = new BusinessCustomerLowPressure(customer[c][0], customer[c][1], customer[c][2],
-                        electricCustomer[c][0], electricCustomer[c][1], electricCustomer[c][2],
+                        electricCustomer[c][0],
                         electricBusiness[c][0], electricBusiness[c][1], electricBusiness[c][2]);
                 System.out.println(businessCustomerLowPressure.toString());
                 System.out.println("Số tiền phải trả là: " + businessCustomerLowPressure.calElectricBill() + " VNĐ");

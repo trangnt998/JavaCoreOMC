@@ -11,9 +11,8 @@ public abstract class BusinessCustomer extends Customer {
     }
 
     public BusinessCustomer(String ID, String name, String phone, double customerType,
-                            double electricNumberPrevPeriod, double electricNumberThisPeriod,
                             double idleElectricNumber, double nomalElectricNumber, double rushElectricNumber) {
-        super(ID, name, phone, customerType, electricNumberPrevPeriod, electricNumberThisPeriod);
+        super(ID, name, phone, customerType);
         this.idleElectricNumber = idleElectricNumber;
         this.nomalElectricNumber = nomalElectricNumber;
         this.rushElectricNumber = rushElectricNumber;
