@@ -6,9 +6,9 @@ public class BusinessCustomerHighPressure extends BusinessCustomer {
     public BusinessCustomerHighPressure() {
     }
 
-    public BusinessCustomerHighPressure(String ID, String name, String phone, double customerType,
+    public BusinessCustomerHighPressure(String ID, String name, String phone,
                                         double idleElectricNumber, double nomalElectricNumber, double rushElectricNumber) {
-        super(ID, name, phone, customerType, idleElectricNumber, nomalElectricNumber, rushElectricNumber);
+        super(ID, name, phone, idleElectricNumber, nomalElectricNumber, rushElectricNumber);
     }
 
     public String toString() { //xuất thông tin khách hàng

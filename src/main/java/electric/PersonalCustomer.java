@@ -7,9 +7,8 @@ public abstract class PersonalCustomer extends Customer {
     public PersonalCustomer() {
     }
 
-    public PersonalCustomer(String ID, String name, String phone, double customerType,
-                            double electricNumberPrevPeriod, double electricNumberThisPeriod) {
-        super(ID, name, phone, customerType);
+    public PersonalCustomer(String ID, String name, String phone, double electricNumberPrevPeriod, double electricNumberThisPeriod) {
+        super(ID, name, phone);
         this.electricNumberPrevPeriod = electricNumberPrevPeriod;
         this.electricNumberThisPeriod = electricNumberThisPeriod;
     }

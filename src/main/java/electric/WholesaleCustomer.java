@@ -5,9 +5,8 @@ public class WholesaleCustomer extends PersonalCustomer {
     public WholesaleCustomer() {
     }
 
-    public WholesaleCustomer(String ID, String name, String phone, double customerType,
-                             double electricNumberPrevPeriod, double electricNumberThisPeriod) {
-        super(ID, name, phone, customerType, electricNumberPrevPeriod, electricNumberThisPeriod);
+    public WholesaleCustomer(String ID, String name, String phone, double electricNumberPrevPeriod, double electricNumberThisPeriod) {
+        super(ID, name, phone, electricNumberPrevPeriod, electricNumberThisPeriod);
     }
 
     public String toString() { //xuất thông tin khách hàng
