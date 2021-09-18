@@ -15,25 +15,16 @@ public class RetailCustomer extends PersonalCustomer {
     }
 
     public double calElectricBill() {//tính số tiền điện phải trả
-        double ammount = 0;
-        double electricNumber = calElectricNumber();
-        int level = 1;
-        while (electricNumber > 0) {
+        int[] levelOfElectric = new int[6];
+        int[] priceOfElectric = new int[6];
 
-            if (level == 6) {
-                ammount += electricNumber
-                        * LevelOfElectric.RetailLevelOfElectric.values()[level - 1].getPrice();
-                break;
-            }
-
-            electricNumber -= LevelOfElectric.RetailLevelOfElectric.values()[level - 1].getLevel();
-            ammount += LevelOfElectric.RetailLevelOfElectric.values()[level - 1].getLevel()
-                    * LevelOfElectric.RetailLevelOfElectric.values()[level - 1].getPrice();
-            level++;
-
+        for (int i = 0; i < 6; i++) {
+            levelOfElectric[i] = LevelOfElectric.RetailLevelOfElectric.values()[i].getLevel();
+            priceOfElectric[i] = LevelOfElectric.RetailLevelOfElectric.values()[i].getPrice();
         }
-        return ammount + 0.1 * ammount;
-    }
 
+        return super.calElectricBill(levelOfElectric, priceOfElectric);
+
+    }
 
 }

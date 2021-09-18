@@ -14,19 +14,12 @@ public class BusinessCustomerMediumPressure extends BusinessCustomer {
                 "\nLoại khách hàng: Khách hàng mua điện kinh doanh trung áp.";
     }
 
-
     public double calElectricBill() {//tính số tiền điện phải trả
-        double ammount = 0;
-
-        double[] typeElectricNumber = new double[3];
-        typeElectricNumber[0] = getIdleElectricNumber();
-        typeElectricNumber[1] = getNomalElectricNumber();
-        typeElectricNumber[2] = getRushElectricNumber();
-
-        for (int i = 0; i < LevelOfElectric.BusinessLevelOfMedium.values().length; i++) {
-            ammount += typeElectricNumber[i] * LevelOfElectric.BusinessLevelOfMedium.values()[i].getPrice();
+        int[] priceOfLevelBusiness = new int[3];
+        for (int i = 0; i < 3; i++) {
+            priceOfLevelBusiness[i] = LevelOfElectric.BusinessLevelOfMedium.values()[i].getPrice();
         }
 
-        return ammount + 0.1 * ammount;
+        return super.calElectricBill(priceOfLevelBusiness);
     }
 }

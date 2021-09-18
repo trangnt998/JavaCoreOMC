@@ -15,19 +15,12 @@ public class BusinessCustomerLowPressure extends BusinessCustomer {
                 "\nLoại khách hàng: Khách hàng mua điện kinh doanh thấp áp.";
     }
 
-
     public double calElectricBill() {//tính số tiền điện phải trả
-        double ammount = 0;
-
-        double[] typeElectricNumber = new double[3];
-        typeElectricNumber[0] = getIdleElectricNumber();
-        typeElectricNumber[1] = getNomalElectricNumber();
-        typeElectricNumber[2] = getRushElectricNumber();
-
-        for (int i = 0; i < LevelOfElectric.BusinessLevelOfLow.values().length; i++) {
-            ammount += typeElectricNumber[i] * LevelOfElectric.BusinessLevelOfLow.values()[i].getPrice();
+        int[] priceOfLevelBusiness = new int[3];
+        for (int i = 0; i < 3; i++) {
+            priceOfLevelBusiness[i] = LevelOfElectric.BusinessLevelOfLow.values()[i].getPrice();
         }
 
-        return ammount + 0.1 * ammount;
+        return super.calElectricBill(priceOfLevelBusiness);
     }
 }

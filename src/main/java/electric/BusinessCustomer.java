@@ -37,8 +37,19 @@ public abstract class BusinessCustomer extends Customer {
                 "\nSố điện dùng trong giờ cao điểm: " + this.rushElectricNumber;
     }
 
+    public double calElectricBill(int[] priceOfLevelBusiness) {//tính số tiền điện phải trả
+        double ammount = 0;
 
-    public abstract double calElectricBill();//tính số tiền điện phải trả
+        double[] typeElectricNumber = new double[3];
+        typeElectricNumber[0] = getIdleElectricNumber();
+        typeElectricNumber[1] = getNomalElectricNumber();
+        typeElectricNumber[2] = getRushElectricNumber();
 
+        int numberOfLevelBusiness = 3;
+        for (int i = 0; i < numberOfLevelBusiness; i++) {
+            ammount += typeElectricNumber[i] * priceOfLevelBusiness[i];
+        }
 
+        return ammount + 0.1 * ammount;
+    }
 }

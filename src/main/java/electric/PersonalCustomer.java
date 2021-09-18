@@ -24,6 +24,31 @@ public abstract class PersonalCustomer extends Customer {
         return this.electricNumberThisPeriod - this.electricNumberPrevPeriod;
     }
 
-    public abstract double calElectricBill(); //tính số tiền điện phải trả
+
+    public double calElectricBill(int[] levelOfElectric, int[] priceOfElectric) { //tính số tiền điện phải trả
+        //đầu vào là số điện mỗi bậc thang và giá mỗi bậc
+        double ammount = 0;
+        double electricNumber = calElectricNumber();
+
+        int level = 1;
+        while (electricNumber > 0) {
+
+            if (level == 6) {
+                ammount += electricNumber * priceOfElectric[level - 1];
+                System.out.println(levelOfElectric[level - 1] * priceOfElectric[level - 1]);
+                break;
+            }
+
+            electricNumber -= levelOfElectric[level - 1];
+            if (electricNumber >= 0) {
+                ammount += levelOfElectric[level - 1] * priceOfElectric[level - 1];
+            }
+            else {
+                ammount += (electricNumber + levelOfElectric[level - 1]) * priceOfElectric[level - 1];
+            }
+            level++;
+        }
+        return ammount + 0.1 * ammount;
+    }
 }
 

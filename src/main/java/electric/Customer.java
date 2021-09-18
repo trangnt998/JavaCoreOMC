@@ -20,6 +20,5 @@ public abstract class Customer {
                 "\nSĐT : " + this.phone;
     }
 
-
     public abstract double calElectricBill(); //tính số tiền điện phải trả
 }

@@ -23,7 +23,7 @@ public class App {
         for (int i = 0; i < customer.length; i++) {//tạo danh sách khách hàng để test
             customer[i][0] = "KH" + (i + 1); // ID
             customer[i][1] = "Nguyễn Văn A" + (i + 1);//name
-            customer[i][2] = "096000000" + (i + 1)%10;//phone
+            customer[i][2] = "096000000" + (i + 1) % 10;//phone
             electricCustomer[i][0] = Math.floor(random.nextDouble() * 4000);//electricNumberPrevPeriod
             electricCustomer[i][1] = electricCustomer[i][0] + Math.floor(random.nextDouble() * 1000);//electricNumberThisPeriod
             electricBusiness[i][0] = Math.floor(random.nextDouble() * 1000);//idleElectricNumber
