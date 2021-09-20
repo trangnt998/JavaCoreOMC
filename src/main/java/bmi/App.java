@@ -52,7 +52,7 @@ public class App {
 
         // dinh dang can nang
         try {
-            System.out.print("Cân nặng: ");
+            System.out.print("Cân nặng (kg): ");
             String weight1 = sc.nextLine();
 
             if (isDouble(weight1)) {
@@ -70,7 +70,7 @@ public class App {
 
         // dinh dang chieu cao
         try {
-            System.out.print("Chiều cao: ");
+            System.out.print("Chiều cao (m): ");
             String height1 = sc.nextLine();
             if (isDouble(height1)) {
                 height = Double.parseDouble(height1);
