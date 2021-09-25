@@ -24,10 +24,10 @@ public class App {
 
 
         //2.Tìm tất cả các địa chỉ email có trong chuỗi văn bản đầu vào text
-        String regexEmail = "[A-Za-z]+\\w*@([A-ZA-z]+\\.[A-Za-z]{2,})(\\.[A-Za-z]{2,})?";
+        String regexEmail = "\\b[A-Za-z]+\\w*@([A-ZA-z]+\\.[A-Za-z]{2,})(\\.[A-Za-z]{2,})?\\b";
         String text = "Hello. I try test email regex with abc122_@gmail.com.vn, " +
                 "123@gmail.com, abc@gmail.c" +
-                "\nAh, adding, a21_@g.com.";
+                "\nAh, adding, a21_@gmail.com, _1a@gmail.com and 1a@gmail.com.";
         Pattern patternEmail = Pattern.compile(regexEmail);
         Matcher matcherEmail = patternEmail.matcher(text);
 
