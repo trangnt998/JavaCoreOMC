@@ -16,17 +16,18 @@ import java.util.Scanner;
  */
 public class App {
 
-    public static Fraction[] sortFractionByAsc(Fraction[] fractions) { //sắp xếp danh sách phân số giảm dần
-        for (int i = 0; i < fractions.length - 1; i++) {
-            for (int j = i + 1; j < fractions.length; j++) {
-                if (fractions[i].compareFraction(fractions[j]) < 0) {
-                    Fraction fractTmp = fractions[i];
-                    fractions[i] = fractions[j];
-                    fractions[j] = fractTmp;
+    public static ArrayList<Fraction> sortFractionByAsc(ArrayList<Fraction> fractions) { //sắp xếp danh sách phân số giảm dần
+        ArrayList<Fraction> arrayFraction = (ArrayList<Fraction>) fractions.clone();
+        for (int i = 0; i < arrayFraction.size() - 1; i++) {
+            for (int j = i + 1; j < arrayFraction.size(); j++) {
+                if (arrayFraction.get(i).compareFraction(arrayFraction.get(j)) < 0) {
+                    Fraction fractTmp = arrayFraction.get(i);
+                    arrayFraction.set(i, arrayFraction.get(j));
+                    arrayFraction.set(j, fractTmp);
                 }
             }
         }
-        return new Fraction[]{};
+        return arrayFraction;
     }
 
 
@@ -109,21 +110,20 @@ public class App {
 
                 case 6:
                     System.out.println("6. Tìm các phân số có giá trị lớn nhất");
-                    fraction = new Fraction();
-                    Fraction[] arrayFraction = new Fraction[fractions.size()];
-                    arrayFraction = sortFractionByAsc(arrayFraction);
 
-                    if (arrayFraction.length == 0) {
+                    ArrayList<Fraction> arrayFraction = sortFractionByAsc(fractions);
+
+                    if (arrayFraction.size() == 0) {
                         System.out.println("Không có!");
-                    } else if (arrayFraction.length == 1) {
-                        arrayFraction[0].printFraction();
+                    } else if (arrayFraction.size() == 1) {
+                        arrayFraction.get(0).printFraction();
                     } else {
-                        for (int i = 1; i < arrayFraction.length; i++) {
-                            if (arrayFraction[0].compareFraction(arrayFraction[i]) == 1) {
-                                arrayFraction[0].printFraction();
-                            } else if (arrayFraction[0].compareFraction(arrayFraction[i]) == 0) {
-                                arrayFraction[0].printFraction();
-                                arrayFraction[i].printFraction();
+                        arrayFraction.get(0).printFraction();
+                        for (int i = 1; i < arrayFraction.size(); i++) {
+                            if (arrayFraction.get(0).compareFraction(arrayFraction.get(i)) == 0) {
+                                arrayFraction.get(i).printFraction();
+                            } else {
+                                break;
                             }
                         }
                     }
