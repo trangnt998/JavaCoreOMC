@@ -91,21 +91,31 @@ public class App {
                     System.out.println("4. Xóa phân số thứ k");
                     System.out.print("Nhập chỉ số của phân số cần xóa, chỉ số tính từ 1: ");
                     int k = scanner.nextInt();
-                    fractions.remove(k - 1);
+
+                    if (k <= fractions.size()) {
+                        fractions.remove(k - 1);
+                    } else {
+                        System.out.println("Kích thước list hiện tại: " + fractions.size() + ", xin mời thao tác lại!");
+                    }
                     break;
 
                 case 5:
                     System.out.println("5. Cập nhật phân số thứ k");
                     System.out.print("Nhập chỉ số của phân số cần cập nhật, chỉ số tính từ 1: ");
                     k = scanner.nextInt();
-                    System.out.println("Nhập phân số mới:");
-                    System.out.print("Tử số = ");
-                    a = scanner.nextInt();
-                    System.out.print("Mẫu số = ");
-                    b = scanner.nextInt();
 
-                    fraction = new Fraction(a, b);
-                    fractions.set(k - 1, fraction);
+                    if (k <= fractions.size()) {
+                        System.out.println("Nhập phân số mới:");
+                        System.out.print("Tử số = ");
+                        a = scanner.nextInt();
+                        System.out.print("Mẫu số = ");
+                        b = scanner.nextInt();
+
+                        fraction = new Fraction(a, b);
+                        fractions.set(k - 1, fraction);
+                    } else {
+                        System.out.println("Kích thước list hiện tại: " + fractions.size() + ", xin mời thao tác lại!");
+                    }
                     break;
 
                 case 6:
