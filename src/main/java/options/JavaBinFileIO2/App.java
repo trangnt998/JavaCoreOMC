@@ -9,10 +9,11 @@ public class App {
         //ghi
         try {
             FileOutputStream fos = new FileOutputStream("data.bin");
-            fos.write("Hello".getBytes());
-            fos.write("\n".getBytes());
-            fos.flush();
-            fos.close();
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
+            bos.write("Hello".getBytes());
+            bos.write("\n".getBytes());
+            bos.flush();
+            bos.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
