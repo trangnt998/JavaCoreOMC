@@ -2,7 +2,7 @@ package practice4;
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class SoDoiXungSoChinhPhuong {
     /*
     1. Nhập một số nguyên dương n (n > 0).
         Hãy cho biết:

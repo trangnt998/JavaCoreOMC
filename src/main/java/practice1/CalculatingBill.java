@@ -2,7 +2,7 @@ package practice1;
 
 import java.util.Scanner;
 
-public class Exercise6 {
+public class CalculatingBill {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         System.out.print("Nhap ten san pham: ");

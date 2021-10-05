@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise6 {
+public class Sort4Int {
     //Nhập 4 số nguyên a, b, c và d. Hãy sắp xếp giá trị của 4 số nguyên này theo thứ tự tăng dần.
 
     public static int[] sort(int[] A) {

@@ -2,7 +2,7 @@ package practice4;
 
 import java.util.Scanner;
 
-public class Exercise2 {
+public class GiaiThuaVaTongGiaiThua {
     /*
     2. Nhập một số nguyên dương n. Tính:
         d. S = 1*2*...*n = n!

@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise7 {
+public class CalTaxiFee {
     /*
     7. Tính tiền đi taxi từ số km nhập vào. Biết:
         a. 1 km đầu giá 15000đ

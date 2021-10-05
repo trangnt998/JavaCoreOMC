@@ -2,7 +2,7 @@ package practice5;
 
 import java.util.Scanner;
 
-public class Exercise2 {
+public class CheckMangChan_NguyenTo_TangDan {
     /*
     2. Các thao tác kiểm tra
         a. Mảng có phải là mảng toàn chẵn

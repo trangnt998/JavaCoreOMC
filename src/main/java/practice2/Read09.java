@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise1 {
+public class Read09 {
     /*
     1. Nhập một số bất kỳ. Hãy đọc giá trị của số nguyên đó nếu nó có giá trị từ 1 đến 9,
     ngược lại thông báo không đọc được.

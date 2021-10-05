@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise4 {
+public class SolveSecondEquation {
     //4. Giải phương trình bậc hai ax2 + bx + c = 0.
     public static void main(String[] args) {
         System.out.print("Nhap he so a, b, c cua phuong trinh ax2 + bx + c: ");

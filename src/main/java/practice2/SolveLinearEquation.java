@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise3 {
+public class SolveLinearEquation {
     //3. Giải phương trình bậc nhất ax + b = 0.
     public static void main(String[] args) {
         System.out.print("Nhap he so a va b cua phuong trinh bac nhat ax + b = 0: ");

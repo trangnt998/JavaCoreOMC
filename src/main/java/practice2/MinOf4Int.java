@@ -3,7 +3,7 @@ package practice2;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Exercise5 {
+public class MinOf4Int {
     //5. Nhập 4 số nguyên a, b, c và d. Tìm số có giá trị nhỏ nhất (min).
 
     public static int getMin(int[] A) {

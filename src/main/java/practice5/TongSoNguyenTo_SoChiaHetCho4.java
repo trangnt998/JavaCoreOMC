@@ -2,10 +2,10 @@ package practice5;
 
 import java.util.Scanner;
 
-import static practice5.Exercise2.inputIntArray;
-import static practice5.Exercise2.isPrime;
+import static practice5.CheckMangChan_NguyenTo_TangDan.inputIntArray;
+import static practice5.CheckMangChan_NguyenTo_TangDan.isPrime;
 
-public class Exercise3 {
+public class TongSoNguyenTo_SoChiaHetCho4 {
     /*
     3. Các thao tác tính toán
         a. Có bao nhiêu số chia hết cho 4 nhưng không chia hết cho 5

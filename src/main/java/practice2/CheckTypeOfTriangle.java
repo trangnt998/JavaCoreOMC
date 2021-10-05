@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.Scanner;
 
-public class Exercise9 {
+public class CheckTypeOfTriangle {
     //9. Nhập độ dài 3 cạnh. Kiểm tra đó có phải là tam giác không và là tam giác gì?
 
     public static boolean checkTriangle(float a, float b, float c) { //check xem 3 cạnh có tạo thành 1 tam giác không

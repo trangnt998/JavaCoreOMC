@@ -2,7 +2,7 @@ package practice4;
 
 import java.util.Scanner;
 
-public class Exercise5 {
+public class ReverseNumber {
     //5. Nhập một số nguyên dương n. Xuất ra số ngược lại. Ví dụ: Nhập 1706  Xuất 6071.
 
     //tìm số đảo ngược

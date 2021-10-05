@@ -2,7 +2,7 @@ package practice4;
 
 import java.util.Scanner;
 
-public class Exercise4 {
+public class SumPrime {
     //4. Tính tổng các số nguyên tố nhỏ hơn n (0 < n < 50)
 
     //check 1 số có phải nguyên tố không
